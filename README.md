@@ -7,7 +7,7 @@
 This connector offers 2 sources:
 
 * `StreamSource` - reads [Valkey streams][valkey-streams] using `xread`
-* `PubSubSource` - writes [Valkey pubsub][valkey-pubsub] using `subscribe`
+* `PubSubSource` - reads [Valkey pubsub][valkey-pubsub] using `subscribe`
 
 ## Installation
 
