@@ -1,6 +1,6 @@
 from typing import List
 
-from bytewax.outputs import StatelessSinkPartition, DynamicSink
+from bytewax.outputs import DynamicSink, StatelessSinkPartition
 from valkey import Valkey, from_url
 
 

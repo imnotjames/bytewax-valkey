@@ -1,6 +1,6 @@
 from typing import Iterable
 
-from bytewax.inputs import StatelessSourcePartition, DynamicSource
+from bytewax.inputs import DynamicSource, StatelessSourcePartition
 from valkey import Valkey, from_url
 
 
@@ -32,11 +32,6 @@ class PubSubSource(DynamicSource[bytes]):
 
     @classmethod
     def from_url(cls, url: str, channel_id: str):
-        """Create a PubSubSource from a URL
-
-        :param url: the valkey URL to connect to
-        :param channel_id: the channel to subscribe to
-        """
         client = from_url(url)
         return cls(client, channel_id)
 

@@ -1,10 +1,9 @@
-from typing import Optional, Iterable
+from typing import Iterable, Optional
 
-from bytewax.inputs import StatefulSourcePartition, FixedPartitionedSource
+from bytewax.inputs import FixedPartitionedSource, StatefulSourcePartition
 from valkey import Valkey, from_url
 
 from ..types import StreamRecordT
-
 
 DEFAULT_BATCH_SIZE = 100
 

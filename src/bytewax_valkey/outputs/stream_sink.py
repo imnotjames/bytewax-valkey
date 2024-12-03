@@ -1,10 +1,9 @@
-from typing import List, Any, cast
+from typing import Any, List, cast
 
-from bytewax.outputs import StatelessSinkPartition, DynamicSink
+from bytewax.outputs import DynamicSink, StatelessSinkPartition
 from valkey import Valkey, from_url
 
 from ..types import StreamRecordT
-
 
 DEFAULT_BATCH_SIZE = 100
 
