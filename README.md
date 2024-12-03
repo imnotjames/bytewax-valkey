@@ -1,6 +1,6 @@
 [![PyPI](https://img.shields.io/pypi/v/bytewax-valkey.svg?style=flat-square)][pypi-package]
 
-# Bytewax Lever
+# Bytewax Valkey
 
 [Valkey][valkey] connectors for [Bytewax][bytewax].
 
