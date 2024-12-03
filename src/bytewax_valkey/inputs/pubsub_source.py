@@ -1,6 +1,6 @@
 from typing import Iterable
 
-from bytewax.inputs import StatelessSourcePartition, DynamicSource, X
+from bytewax.inputs import StatelessSourcePartition, DynamicSource
 from valkey import Valkey, from_url
 
 
