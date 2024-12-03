@@ -3,11 +3,13 @@ from .inputs import (
     StreamSource,
 )
 from .outputs import (
+    PubSubSink,
     StreamSink,
 )
 
 __all__ = (
+    "PubSubSink",
     "PubSubSource",
-    "StreamSource",
     "StreamSink",
+    "StreamSource",
 )
