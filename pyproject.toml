@@ -1,6 +1,6 @@
 [project]
 name = "bytewax-valkey"
-version = "0.2.1"
+version = "0.1.0"
 description = "Valkey connectors for Bytewax"
 readme = "README.md"
 authors = [
