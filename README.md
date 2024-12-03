@@ -23,7 +23,7 @@ This package is available via [PyPi][pypi-package] as
 ```python
 import os
 
-from bytewax_valkey.inputs.pubsub_source import PubSubSource
+from bytewax_valkey import PubSubSource
 from bytewax.connectors.stdio import StdOutSink
 
 import bytewax.operators as op
@@ -59,7 +59,7 @@ op.output("output", flow_input, PubSubSink.from_url(VALKEY_URL, "example"))
 ```python
 import os
 
-from bytewax_valkey.inputs.stream_source import StreamSource
+from bytewax_valkey import StreamSource
 from bytewax.connectors.stdio import StdOutSink
 
 import bytewax.operators as op
