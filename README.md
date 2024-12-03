@@ -4,7 +4,7 @@
 
 [Valkey][valkey] connectors for [Bytewax][bytewax].
 
-This connector offers 1 source and 1 sink:
+This connector offers 2 sources:
 
 * `StreamSource` - reads [Valkey streams][valkey-streams] using `xread`
 * `PubSubSource` - writes [Valkey pubsub][valkey-pubsub] using `subscribe`
