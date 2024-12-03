@@ -1,0 +1,29 @@
+[project]
+name = "bytewax-valkey"
+version = "0.2.1"
+description = "Valkey connectors for Bytewax"
+readme = "README.md"
+authors = [
+    { name = "James Ward", email = "james@notjam.es" }
+]
+license = { file = "LICENSE" }
+keywords = [ "bytewax", "valkey" ]
+requires-python = ">=3.12"
+dependencies = [
+    "bytewax>=0.21.0",
+    "valkey>=6.0.2",
+]
+
+[project.urls]
+Repository = "https://github.com/imnotjames/bytewax-valkey.git"
+Issues = "https://github.com/imnotjames/bytewax-valkey/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest-mock>=3.14.0",
+    "pytest>=8.3.3",
+]
