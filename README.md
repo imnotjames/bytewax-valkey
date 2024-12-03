@@ -4,9 +4,10 @@
 
 [Valkey][valkey] connectors for [Bytewax][bytewax].
 
-This connector offers 2 sources:
+This connector offers 2 sources and 1 sink:
 
 * `StreamSource` - reads [Valkey streams][valkey-streams] using `xread`
+* `StreamSink` - writes [Valkey streams][valkey-streams] using `xadd`
 * `PubSubSource` - reads [Valkey pubsub][valkey-pubsub] using `subscribe`
 
 ## Installation
@@ -32,7 +33,6 @@ VALKEY_URL = os.environ["VALKEY_URL"]
 flow = Dataflow("valkey_example")
 flow_input = op.input("input", flow, PubSubSource.from_url(VALKEY_URL, "example"))
 op.output("output", flow_input, StdOutSink())
-
 ```
 
 ### Stream Source
@@ -51,7 +51,24 @@ VALKEY_URL = os.environ["VALKEY_URL"]
 flow = Dataflow("valkey_example")
 flow_input = op.input("input", flow, StreamSource.from_url(VALKEY_URL, "example"))
 op.output("output", flow_input, StdOutSink())
+```
 
+### Stream Sink
+
+```python
+import os
+
+from bytewax_valkey import StreamSink
+from bytewax.testing import TestingSource
+
+import bytewax.operators as op
+from bytewax.dataflow import Dataflow
+
+VALKEY_URL = os.environ["VALKEY_URL"]
+
+flow = Dataflow("valkey_example")
+flow_input = op.input("input", flow, TestingSource([{"key": "value"}]))
+op.output("output", flow_input, StreamSink.from_url(VALKEY_URL, "example"))
 ```
 
 ## License
