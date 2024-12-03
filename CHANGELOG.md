@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.2.0](https://github.com/imnotjames/bytewax-valkey/compare/v0.1.1...v0.2.0) (2024-12-03)
+
+
+### Features
+
+* add pubsub sink ([a5dcec3](https://github.com/imnotjames/bytewax-valkey/commit/a5dcec3648ff8a17952f44a9f8987c53dbf400d4))
+* add stream sink ([c628ed4](https://github.com/imnotjames/bytewax-valkey/commit/c628ed4c28b60981fa1ec7cbe9e50d2f97cdd156))
+
+
+### Documentation
+
+* cleaner imports for examples ([071f0ea](https://github.com/imnotjames/bytewax-valkey/commit/071f0ea8d5c982e160102896f5872beb8e794740))
+* PubSubSource reads, not writes ([d747c52](https://github.com/imnotjames/bytewax-valkey/commit/d747c5200c6758cd283d920d36dd1f9a9fd198e1))
+* reference the correct number of sources ([543c673](https://github.com/imnotjames/bytewax-valkey/commit/543c673a01c4f99f3789c289c2e0355add75045b))
+
 ## [0.1.1](https://github.com/imnotjames/bytewax-valkey/compare/v0.1.0...v0.1.1) (2024-12-03)
 
 
