@@ -1,3 +1,5 @@
+from .inputs import (
+    StreamSource,
+)
 
-
-__all__ = ()
+__all__ = ("StreamSource",)
