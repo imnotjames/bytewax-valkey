@@ -10,7 +10,7 @@ license = { file = "LICENSE" }
 keywords = [ "bytewax", "valkey" ]
 requires-python = ">=3.12"
 dependencies = [
-    "bytewax>=0.21.0",
+    "bytewax>=0.21.1",
     "valkey>=6.0.2",
 ]
 
