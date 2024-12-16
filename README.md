@@ -4,12 +4,13 @@
 
 [Valkey][valkey] connectors for [Bytewax][bytewax].
 
-This connector offers 2 sources and 2 sinks:
+This connector offers 3 sources and 2 sinks:
 
 * `StreamSink` - writes [Valkey streams][valkey-streams] using `xadd`
 * `StreamSource` - reads [Valkey streams][valkey-streams] using `xread`
 * `PubSubSink` - writes [Valkey pubsub][valkey-pubsub] using `publish`
 * `PubSubSource` - reads [Valkey pubsub][valkey-pubsub] using `subscribe`
+* `PubSubPatternSource` - reads [Valkey pubsub][valkey-pubsub] using `psubscribe`
 
 ## Installation
 
@@ -33,6 +34,24 @@ VALKEY_URL = os.environ["VALKEY_URL"]
 
 flow = Dataflow("valkey_example")
 flow_input = op.input("input", flow, PubSubSource.from_url(VALKEY_URL, "example"))
+op.output("output", flow_input, StdOutSink())
+```
+
+### Pub/Sub Pattern Source
+
+```python
+import os
+
+from bytewax_valkey import PubSubPatternSource
+from bytewax.connectors.stdio import StdOutSink
+
+import bytewax.operators as op
+from bytewax.dataflow import Dataflow
+
+VALKEY_URL = os.environ["VALKEY_URL"]
+
+flow = Dataflow("valkey_example")
+flow_input = op.input("input", flow, PubSubPatternSource.from_url(VALKEY_URL, "example*"))
 op.output("output", flow_input, StdOutSink())
 ```
 

@@ -1,4 +1,5 @@
 from .inputs import (
+    PubSubPatternSource,
     PubSubSource,
     StreamSource,
 )
@@ -9,6 +10,7 @@ from .outputs import (
 
 __all__ = (
     "PubSubSink",
+    "PubSubPatternSource",
     "PubSubSource",
     "StreamSink",
     "StreamSource",
