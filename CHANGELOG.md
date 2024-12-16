@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0](https://github.com/imnotjames/bytewax-valkey/compare/v0.2.0...v0.3.0) (2024-12-16)
+
+
+### Features
+
+* add a pubsub pattern source ([3abb9e9](https://github.com/imnotjames/bytewax-valkey/commit/3abb9e9726450ccca61973326611196f33ab9ae2))
+
+
+### Documentation
+
+* switch LICENSE definition to plain MIT ([4d5523e](https://github.com/imnotjames/bytewax-valkey/commit/4d5523e4034716f219854be9b2155d8708a9ba83))
+
 ## [0.2.0](https://github.com/imnotjames/bytewax-valkey/compare/v0.1.1...v0.2.0) (2024-12-03)
 
 
